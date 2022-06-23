@@ -34,7 +34,12 @@ def savings(gross_pay, tax_rate, expenses):
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
-    return (gross_pay*(1-tax_rate)) - expenses
+    
+    def savings(g, t, e):
+        return (g*(1-t)) - e
+    
+    x=savings(10000,0.10,2000) 
+    x//1
     
 
 def material_waste(total_material, material_units, num_jobs, job_consumption):
@@ -70,9 +75,13 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
     '''
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-   
-    return print((total_material-(num_jobs*job_consumption)),material_units)
+    def material_waste(a, b, c, d):
+        return print((a-(c*d)),b)
     
+    x = material_waste(100,kg,3,20)
+    
+    x
+
 def interest(principal, rate, periods):
     '''Interest.
     5 points.
@@ -102,9 +111,11 @@ def interest(principal, rate, periods):
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
-   
-    return principal*(1+(rate*periods))
+    def interest(P, r, t):
+        return P*(1+(r*t))
     
+    x = interest(10000, 0.1, 2)
+    x
 
 def body_mass_index(weight, height):
     '''Body Mass Index.
@@ -137,9 +148,9 @@ def body_mass_index(weight, height):
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
-    ft_height = list[0]/3.281
-    inch_height = list[1]/39.37
-    height = ft_height + inch_height
+    list=[5,10]
+    def body_mass_index(w, h,i):
+        return (w/2.205)/((h/3.281)+(i/39.37))**2
     
-    return (weight/2.205)/(height**2) 
-    
+    x = body_mass_index(150, list[0],list[1])
+    x
