@@ -71,7 +71,7 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
    
-    return (str(int(total_material-(num_jobs*job_consumption)))+ str(material_units)
+    return str(int(total_material - (num_jobs * job_consumption))) + material_units
     
 def interest(principal, rate, periods):
     '''Interest.
@@ -103,8 +103,8 @@ def interest(principal, rate, periods):
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
    
-    return int(principal) + int(principal*rate*periods)
-    
+    return math.floor((principal + (principal * (periods * rate))))
+
 
 def body_mass_index(weight, height):
     '''Body Mass Index.
@@ -137,9 +137,5 @@ def body_mass_index(weight, height):
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
-    ft_height = height[0]*12
-    inch_height = height[1]/* 0.0254
-    total_height = ft_height + inch_height
-    
-    return (weight*0.453592)/(total_height**2) 
+    return (weight / 2.205) / pow(((height[1]+(12 * height[0])) * 0.0254), 2)
     
